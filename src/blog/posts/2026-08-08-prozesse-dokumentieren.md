@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Warum deine Gründung ohne dokumentierte Prozesse scheitert
+title: "Warum deine Gründung ohne dokumentierte Prozesse scheitert"
 date: 2026-08-08
 author: Olaf Scharfenberg
-excerpt: Die meisten Gründer machen einen großen Fehler: Sie bauen ihre Prozesse im Kopf auf. Warum das teuer wird und wie du es besser machst.
+excerpt: "Die meisten Gründer machen einen großen Fehler: Sie bauen ihre Prozesse im Kopf auf. Warum das teuer wird und wie du es besser machst."
 ---
 
 ## Das Problem
