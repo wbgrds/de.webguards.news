@@ -1,41 +1,62 @@
-name: Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
-      - uses: actions/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
       
-      - uses: actions/configure-pages@v4
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
       
-      - uses: actions/jekyll-build-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          source: ./
-          destination: ./_site
-      
-      - uses: actions/upload-pages-artifact@v2
+          name: jekyll-build
+          path: _site/
+  
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    needs: build
+    
+    permissions:
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
         with:
-          path: ./_site
+          name: jekyll-build
+          path: ./
       
-      - id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
