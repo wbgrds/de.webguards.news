@@ -4,6 +4,7 @@ baseurl: ""
 url: "https://news.webguards.de"
 markdown: kramdown
 theme: minima
+permalink: /blog/:title/
 
 plugins:
   - jekyll-feed
