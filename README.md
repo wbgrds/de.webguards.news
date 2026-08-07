@@ -1,56 +1,30 @@
 # WEBGUARDS News
 
-Blog-Plattform für WEBGUARDS – gebaut mit [11ty](https://www.11ty.dev/).
-
-## Setup
-
-```bash
-npm install
-npm run serve    # Lokal entwickeln
-npm run build    # Produktions-Build
-npm run watch    # Mit Watch-Modus
-```
+Blog-Plattform für WEBGUARDS – gebaut mit Jekyll + GitHub Pages.
 
 ## Neue Posts schreiben
 
-Erstelle eine neue Datei in `src/blog/posts/`:
+1. Erstelle eine Datei in `_posts/` mit dem Format: `YYYY-MM-DD-titel.md`
+2. Front Matter hinzufügen:
 
 ```markdown
 ---
 layout: post
 title: Dein Titel
-date: 2026-08-07
 author: Dein Name
-excerpt: Kurze Zusammenfassung für die Übersicht
 ---
 
-# Inhalt
-
-Schreib hier dinen Artikel...
+# Inhalt hier...
 ```
 
-## Struktur
+3. Committen und pushen → **sofort live**
+
+## Beispiel
 
 ```
-src/
-  /blog/posts/         ← Blog-Artikel (Markdown)
-  /css/               ← Stylesheets
-  /js/                ← JavaScript
-  /_layouts/          ← Seitenlayouts
-  /_includes/         ← Wiederverwendbare Komponenten
-  index.md            ← Homepage
-.eleventy.js          ← 11ty Konfiguration
+_posts/2026-08-08-prozesse-dokumentieren.md
 ```
 
-## Deployment
+## Domain
 
-- Commits zu `main` triggern automatisch GitHub Actions
-- Build und Deploy zu GitHub Pages
-- Live unter: `news.webguards.de`
-
-## Live-Domain
-
-```
-Repository: wbgrds/de.webguards.news
-GitHub Pages Domain: news.webguards.de (mit Custom Domain)
-```
+Live unter: `news.webguards.de`

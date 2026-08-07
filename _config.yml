@@ -1,0 +1,13 @@
+title: WEBGUARDS News
+description: Blog für Gründer
+baseurl: ""
+url: "https://news.webguards.de"
+markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+author:
+  name: WEBGUARDS
+  email: post@webguards.de

@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Warum deine Gründung ohne dokumentierte Prozesse scheitert"
-date: 2026-08-08
 author: Olaf Scharfenberg
-excerpt: "Die meisten Gründer machen einen großen Fehler: Sie bauen ihre Prozesse im Kopf auf. Warum das teuer wird und wie du es besser machst."
 ---
 
 ## Das Problem
@@ -19,63 +17,30 @@ Aber dann passiert etwas:
 
 **Das ist keine Schwäche – das ist völlig normal.** Aber es ist auch teuer.
 
----
-
 ## Warum Prozesse dokumentieren spart Zeit (und Geld)
 
-### 1. **Wissen bleibt nicht nur bei dir**
+### 1. Wissen bleibt nicht nur bei dir
 Wenn du krank wirst oder in den Urlaub gehst, stoppe nicht das ganze Business. Eine dokumentierte Checkliste für "Kunde onboarden" braucht 2 Minuten zum Lesen, nicht 2 Stunden zum Erklären.
 
-### 2. **Fehler passieren weniger oft**
+### 2. Fehler passieren weniger oft
 Ein schriftlicher Prozess ist wie ein Navi für dein Business. "Rechnung schreiben" ist nicht vergessen, nicht interpretierbar, nicht "wie ich es heute gerade sehe".
 
-### 3. **Deine Zeit wird wieder deine**
+### 3. Deine Zeit wird wieder deine
 Jedes Mal die gleiche Frage beantworten kostet Zeit. Ein dokumentierter Prozess antwortet für dich.
 
-### 4. **Dein Business wird verdienbar**
+### 4. Dein Business wird verdienbar
 Wenn du **weißt**, wie lange was dauert, kannst du richtig kalkulieren. Vorher sind deine Preise einfach geraten.
 
----
-
 ## Wie du anfängst (nicht perfekt, sondern echt)
-
-Du brauchst nicht ein 100-Seiten-Handbuch. Du brauchst Anfang.
 
 ### Schritt 1: Eine Sache aufschreiben
 Nimm den Prozess, der dir heute am meisten Zeit kostet. Schreib auf, wie du es machst. Punkt für Punkt.
 
-Beispiel: "Kundenanfrage bearbeiten"
-```
-1. E-Mail öffnen
-2. Anforderung verstehen
-3. Verfügbarkeit checken
-4. Angebot schreiben
-5. Versenden
-6. Follow-up einrichten
-```
-
 ### Schritt 2: Mit jemandem teesten
-Gib diesen Prozess einer Person (Freund, Kollege, ChatGPT) und sag: "Kannst du dem folgen?" 
-
-Was unklar ist, wird klarer gemacht.
+Gib diesen Prozess einer Person und sag: "Kannst du dem folgen?"
 
 ### Schritt 3: Monatlich eine neue hinzufügen
-Nicht alle auf einmal. Eine pro Monat. Nach 12 Monaten hast du 12 Prozesse dokumentiert. Nach 24 Monaten 24.
-
----
-
-## Womit anfangen?
-
-Diese Prozesse erste mit Dokumentieren:
-
-1. **Kunde gewinnen** (wie funktioniert dein Verkauf?)
-2. **Auftrag erfüllen** (wie arbeitest du ab?)
-3. **Rechnung schreiben** (wie wird bezahlt?)
-4. **Feedback einholen** (wie weißt du, ob's gut war?)
-
-Das sind oft die vier wichtigsten.
-
----
+Nicht alle auf einmal. Eine pro Monat.
 
 ## Die Wahrheit
 
@@ -84,7 +49,3 @@ Niemand dokumentiert gerne. Aber Gründer, die es tun, bauen schneller skalierba
 Fang heute an. Eine Seite. Ein Prozess.
 
 Dein zukünftiges Ich wird dir dafür danken.
-
----
-
-**Nächste Woche:** Wie du Prozesse automatisierst (und warum das die beste Investition ist).
