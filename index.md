@@ -18,3 +18,4 @@ Praktische Erfahrungen, Lösungen und Best Practices für Gründer – Prozesse,
     transition: all 0.3s ease;
   ">Artikel lesen →</a>
 </div>
+<!-- Cache bust -->
