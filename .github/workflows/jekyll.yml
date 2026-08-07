@@ -1,4 +1,4 @@
-name: Build Jekyll Site
+name: Test
 
 on:
   push:
@@ -6,9 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Test"
-      - run: apt-get update
-      - run: apt-get install -y ruby-full
+      - run: echo "Working"
