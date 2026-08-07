@@ -23,7 +23,7 @@
       --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     }
 
-    html, body {
+    html {
       height: 100%;
     }
 
@@ -32,8 +32,9 @@
       color: var(--text-primary);
       font-family: var(--font-family);
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
     }
 
     header {
@@ -41,7 +42,6 @@
       padding: 1.5rem;
       margin-bottom: 2rem;
       border-radius: 0 0 var(--border-radius) var(--border-radius);
-      flex-shrink: 0;
     }
 
     header a {
@@ -112,13 +112,10 @@
     }
 
     .container {
-      flex-grow: 1;
       max-width: 45rem;
       margin: 0 auto;
       padding: 0 1rem;
       width: 100%;
-      display: flex;
-      flex-direction: column;
     }
 
     footer {
@@ -129,7 +126,6 @@
       color: var(--text-secondary);
       font-size: 0.875rem;
       width: 100%;
-      flex-shrink: 0;
     }
 
     ul {
