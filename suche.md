@@ -17,20 +17,19 @@ permalink: /suche/
   margin-bottom: 2rem;
 ">
 
-<div id="search-results" style="margin-top: 2rem;">
-</div>
+<div id="search-results" style="margin-top: 2rem;"></div>
 
 <script>
 const posts = [
 {% for post in site.posts %}
-{
-  title: "{{ post.title }}",
-  url: "{{ post.url }}",
-  date: "{{ post.date | date: '%d. %B %Y' }}",
-  excerpt: "{{ post.excerpt | strip_html | truncatewords: 30 }}",
-  author: "{{ post.author }}",
-  tags: [{% for tag in post.tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
-},
+  {
+    title: "{{ post.title | escape }}",
+    url: "{{ post.url }}",
+    date: "{{ post.date | date: '%d. %B %Y' }}",
+    excerpt: "{{ post.excerpt | strip_html | truncatewords: 30 | escape }}",
+    author: "{{ post.author | escape }}",
+    tags: [{% for tag in post.tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+  }{{ unless forloop.last }},{{ endunless }}
 {% endfor %}
 ];
 
@@ -59,7 +58,7 @@ function search(query) {
     <div class="post-card">
       <div class="article-meta">${post.date}${post.author ? ` • ${post.author}` : ''}</div>
       <h3><a href="${post.url}">${post.title}</a></h3>
-      <p style="margin: 0; color: #cbd5e1; font-size: 0.95rem;">${post.excerpt}…</p>
+      <p style="margin: 0; color: #cbd5e1; font-size: 0.95rem;">${post.excerpt}</p>
       ${post.tags.length > 0 ? `<div style="margin-top: 0.75rem; font-size: 0.85rem;">
         ${post.tags.map(tag => `<span style="color: #22d3ee;">#${tag}</span>`).join(' ')}
       </div>` : ''}
@@ -67,5 +66,6 @@ function search(query) {
   `).join('');
 }
 
+searchInput.addEventListener('keyup', (e) => search(e.target.value));
 searchInput.addEventListener('input', (e) => search(e.target.value));
 </script>
