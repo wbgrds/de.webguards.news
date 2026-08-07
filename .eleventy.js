@@ -24,6 +24,10 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("htmlDateString", function(date) {
+    return new Date(date).toISOString().split('T')[0];
+  });
+
   return {
     dir: {
       input: "src",
