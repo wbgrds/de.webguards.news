@@ -9,6 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Starting build"
-      - run: apt-get update && apt-get install -y ruby-full build-essential
-      - run: gem install bundler jekyll
+      - run: echo "Test"
+      - run: apt-get update
+      - run: apt-get install -y ruby-full
