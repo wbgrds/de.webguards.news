@@ -1,6 +1,9 @@
 ---
-layout: home
-title: WEBGUARDS News
+layout: default
 ---
 
-Blog für Gründer – Prozesse, Automation und rechtliche Sicherheit.
+# WEBGUARDS News
+
+Blog für Gründer – Prozesse, Automation und Sicherheit.
+
+[Alle Artikel →](/posts/)

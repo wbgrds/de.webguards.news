@@ -1,41 +1,35 @@
-name: Build and Deploy Jekyll
+name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    
     permissions:
       contents: read
       pages: write
       id-token: write
-    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1
-          bundler-cache: true
-      
-      - name: Build site
-        run: bundle exec jekyll build --strict-front-matter
-      
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: _site
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    - uses: actions/checkout@v4
+    
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+    
+    - name: Build with Jekyll
+      uses: actions/jekyll-build-pages@v1
+      with:
+        source: ./
+        destination: ./_site
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+    
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2

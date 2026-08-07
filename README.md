@@ -1,12 +1,18 @@
 # WEBGUARDS News
 
-Blog-Plattform für WEBGUARDS – gebaut mit Jekyll + GitHub Pages.
+Blog für Gründer – gebaut mit Jekyll + GitHub Pages.
 
-## Neue Posts schreiben
+**Live:** https://news.webguards.de
 
-1. Erstelle eine Datei in `_posts/` mit dem Format: `YYYY-MM-DD-titel.md`
-2. Front Matter hinzufügen:
+## Neue Artikel schreiben
 
+Erstelle eine Datei in `_posts/` mit dem Format:
+
+```
+_posts/YYYY-MM-DD-titel.md
+```
+
+Inhalt:
 ```markdown
 ---
 layout: post
@@ -14,17 +20,7 @@ title: Dein Titel
 author: Dein Name
 ---
 
-# Inhalt hier...
+# Dein Inhalt hier
 ```
 
-3. Committen und pushen → **sofort live**
-
-## Beispiel
-
-```
-_posts/2026-08-08-prozesse-dokumentieren.md
-```
-
-## Domain
-
-Live unter: `news.webguards.de`
+Committen und pushen → sofort live.

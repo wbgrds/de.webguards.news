@@ -1,11 +1,9 @@
 title: WEBGUARDS News
 description: Blog für Gründer
-baseurl: ""
 url: "https://news.webguards.de"
-markdown: kramdown
-theme: minima
-permalink: /blog/:title/
+baseurl: ""
 
+markdown: kramdown
 plugins:
   - jekyll-feed
 
