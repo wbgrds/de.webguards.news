@@ -1,4 +1,4 @@
-name: Test
+name: Build Jekyll Site
 
 on:
   push:
@@ -6,7 +6,22 @@ on:
       - main
 
 jobs:
-  test:
+  jekyll:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Working"
+      - uses: actions/checkout@v4
+      
+      - name: Install and build
+        run: |
+          apt-get update
+          apt-get install -y ruby-full build-essential
+          gem install bundler jekyll
+          cd ${{ github.workspace }}
+          bundle install
+          bundle exec jekyll build
+      
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: _site
+      
+      - uses: actions/deploy-pages@v2
