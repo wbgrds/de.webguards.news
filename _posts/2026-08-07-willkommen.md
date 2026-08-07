@@ -2,6 +2,7 @@
 layout: post
 title: Willkommen bei WEBGUARDS News
 author: Olaf Scharfenberg
+permalink: /blog/willkommen/
 ---
 
 Hallo und willkommen! 👋

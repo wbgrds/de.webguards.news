@@ -2,6 +2,7 @@
 layout: post
 title: "Warum deine Gründung ohne dokumentierte Prozesse scheitert"
 author: Olaf Scharfenberg
+permalink: /blog/prozesse-dokumentieren/
 ---
 
 ## Das Problem
