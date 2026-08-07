@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+{% include head.html %}
+<body>
+  <header>
+    <a href="/">📰 WEBGUARDS News</a>
+  </header>
+  
+  <div class="container">
+    <article>
+      <div class="article-meta">
+        <span>{{ page.date | date: "%d. %B %Y" }}</span>
+        {% if page.author %}<span>von {{ page.author }}</span>{% endif %}
+      </div>
+      
+      <h1>{{ page.title }}</h1>
+      
+      {{ content }}
+    </article>
+    
+    <p style="text-align: center; margin-top: 2rem;">
+      <a href="/posts/">← Alle Artikel</a>
+    </p>
+  </div>
+  
+  <footer>
+    <p>© 1999–2026 WEBGUARDS UG. Für Gründer, von Gründern.</p>
+  </footer>
+</body>
+</html>

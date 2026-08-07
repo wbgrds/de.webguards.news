@@ -1,5 +1,5 @@
 title: WEBGUARDS News
-description: Blog für Gründer
+description: Blog für Gründer – Prozesse, Automation und Sicherheit
 url: "https://news.webguards.de"
 baseurl: ""
 
@@ -10,3 +10,5 @@ plugins:
 author:
   name: WEBGUARDS
   email: post@webguards.de
+
+excerpt_separator: "\n\n"
