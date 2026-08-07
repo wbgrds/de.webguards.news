@@ -15,12 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1
-          bundler-cache: true
+      - name: Install Ruby and dependencies
+        run: |
+          apt-get update
+          apt-get install -y ruby-full build-essential zlib1g-dev
+          gem install bundler
 
-      - run: bundle exec jekyll build --verbose
+      - name: Install gems
+        run: bundle install
+
+      - name: Build site
+        run: bundle exec jekyll build
 
       - uses: actions/upload-pages-artifact@v2
         with:
