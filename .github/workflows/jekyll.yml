@@ -9,16 +9,7 @@ jobs:
   build-site:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Starting"
       - uses: actions/checkout@v4
-      
+      - run: echo "Checked out"
       - run: apt-get update
-      - run: apt-get install -y ruby-full build-essential
-      - run: gem install bundler jekyll
-      - run: bundle install
-      - run: bundle exec jekyll build
-      
-      - uses: actions/upload-pages-artifact@v2
-        with:
-          path: _site
-      
-      - uses: actions/deploy-pages@v2
