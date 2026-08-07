@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} – WEBGUARDS News</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="https://news.webguards.de{{ page.url }}">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">WEBGUARDS News</a>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            {{ content | safe }}
+        </div>
+    </main>
+
+    <footer>
+        © 1999 – 2026 WEBGUARDS. <a href="https://webguards.de">Zur Hauptseite</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+---
+layout: base
+title: Blog
+description: Alle Artikel
+---
+
+# Blog
+
+{% if collections.blog.length > 0 %}
+  <div class="posts-list">
+    {% for post in collections.blog %}
+      <a href="{{ post.url }}" class="post-card">
+        <h2>{{ post.data.title }}</h2>
+        <div class="post-meta">
+          <time datetime="{{ post.data.date | htmlDateString }}">
+            {{ post.data.date | dateFilter }}
+          </time>
+          {% if post.data.author %}
+            <span class="post-author">von {{ post.data.author }}</span>
+          {% endif %}
+        </div>
+        <p class="excerpt">{{ post.data.excerpt }}</p>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Noch keine Artikel veröffentlicht.</p>
+{% endif %}
