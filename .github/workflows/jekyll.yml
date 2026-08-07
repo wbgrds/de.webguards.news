@@ -11,23 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Install Ruby and build
-        run: |
-          apt-get update
-          apt-get install -y ruby-full build-essential
-          cd ${{ github.workspace }}
-          gem install bundler jekyll
-          bundle install
-          bundle exec jekyll build
+      - run: apt-get update && apt-get install -y ruby-full build-essential
+      - run: gem install bundler jekyll
+      - run: bundle install
+      - run: bundle exec jekyll build
       
       - uses: actions/upload-pages-artifact@v2
         with:
           path: _site
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-    steps:
+      
       - uses: actions/deploy-pages@v2
